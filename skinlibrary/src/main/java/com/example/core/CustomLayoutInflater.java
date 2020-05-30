@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatViewInflater;
 
 import com.example.view.SkinButton;
 import com.example.view.SkinLinearLayout;
+import com.example.view.SkinRelativeLayout;
 import com.example.view.SkinTextView;
 
 public class CustomLayoutInflater extends AppCompatViewInflater {
@@ -33,6 +34,9 @@ public class CustomLayoutInflater extends AppCompatViewInflater {
                 break;
             case "Button":
                 view = new SkinButton(mContext, activityAttrs);
+                break;
+            case "RelativeLayout":
+                view = new SkinRelativeLayout(mContext, activityAttrs);
                 break;
         }
         return view;

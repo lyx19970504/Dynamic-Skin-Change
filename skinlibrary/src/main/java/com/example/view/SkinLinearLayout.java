@@ -10,14 +10,15 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
+import com.example.SkinManager;
 import com.example.core.R;
 import com.example.core.ViewMatch;
+import com.example.utils.StorageUtil;
 
 public class SkinLinearLayout extends LinearLayout implements ViewMatch {
 
     private static final String TAG = "SkinLinearLayout";
 
-    private static final int DEFAULT_VALUE = -1;
     private SparseIntArray mSparseIntArray;
     private static final int[] resourceNames = R.styleable.SkinLinearLayout;
 
@@ -31,13 +32,7 @@ public class SkinLinearLayout extends LinearLayout implements ViewMatch {
 
     public SkinLinearLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        mSparseIntArray = new SparseIntArray();
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, resourceNames, defStyleAttr, 0);
-        for (int i = 0; i < typedArray.length(); i++) {
-            int resourceId = typedArray.getResourceId(i, DEFAULT_VALUE);
-            mSparseIntArray.put(resourceNames[i], resourceId);
-        }
-        typedArray.recycle();
+        mSparseIntArray = StorageUtil.getSparseIntArray(context, attrs, resourceNames, defStyleAttr);
     }
 
 
@@ -45,9 +40,19 @@ public class SkinLinearLayout extends LinearLayout implements ViewMatch {
     public void skinChange() {
         int backgroundKey = resourceNames[R.styleable.SkinLinearLayout_android_background];
         int backgroundResourceId = mSparseIntArray.get(backgroundKey);
-        if(backgroundResourceId > 0){
-            Drawable drawable = ContextCompat.getDrawable(getContext(), backgroundResourceId);
-            setBackground(drawable);
+        if (backgroundResourceId > 0) {
+            if (SkinManager.getInstance().isDefaultSkin()) {
+                Drawable drawable = ContextCompat.getDrawable(getContext(), backgroundResourceId);
+                setBackgroundDrawable(drawable);
+            } else {
+                Object backgroundObject = SkinManager.getInstance().getBackgroundOrSrc(backgroundResourceId);
+                if (backgroundObject instanceof Integer) {
+                    setBackgroundResource((Integer) backgroundObject);
+                } else if(backgroundObject instanceof Drawable){
+                    Drawable drawable = (Drawable) backgroundObject;
+                    setBackgroundDrawable(drawable);
+                }
+            }
         }
     }
 }
