@@ -168,7 +168,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/iv"
-            android:text="光辉岁月"
+            android:text="风景图"
             android:textColor="@color/skin_textColor"
             android:textSize="16sp" />
 
