@@ -1,4 +1,6 @@
-package com.example.dynamicskindemo;
+package com.example.dynamic_skin_change;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

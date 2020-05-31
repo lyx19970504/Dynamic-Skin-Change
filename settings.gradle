@@ -1,2 +1,2 @@
 include ':app', ':skinlibrary'
-rootProject.name='dynamicSkinDemo'
+rootProject.name='Dynamic-Skin-Change'

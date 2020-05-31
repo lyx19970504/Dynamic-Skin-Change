@@ -1,4 +1,4 @@
-package com.example.dynamicskindemo;
+package com.example.dynamic_skin_change;
 
 import android.app.Application;
 

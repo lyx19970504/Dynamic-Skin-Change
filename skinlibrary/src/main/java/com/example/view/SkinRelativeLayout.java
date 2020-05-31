@@ -1,7 +1,6 @@
 package com.example.view;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
@@ -10,8 +9,8 @@ import android.widget.RelativeLayout;
 import androidx.core.content.ContextCompat;
 
 import com.example.SkinManager;
-import com.example.core.R;
 import com.example.core.ViewMatch;
+import com.example.skinlibrary.R;
 import com.example.utils.StorageUtil;
 
 public class SkinRelativeLayout extends RelativeLayout implements ViewMatch {

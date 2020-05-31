@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.SparseIntArray;
 import android.widget.ImageView;
 
@@ -12,8 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.example.SkinManager;
-import com.example.core.R;
 import com.example.core.ViewMatch;
+import com.example.skinlibrary.R;
 import com.example.utils.StorageUtil;
 
 @SuppressLint("AppCompatCustomView")

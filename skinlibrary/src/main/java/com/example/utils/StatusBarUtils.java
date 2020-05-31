@@ -1,7 +1,6 @@
 package com.example.utils;
 
 import android.app.Activity;
-import android.content.res.TypedArray;
 
 public class StatusBarUtils {
 

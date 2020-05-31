@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">dynamicSkinDemo</string>
-
+    <string name="app_name">Dynamic-Skin-Change</string>
     <string name="custom_typeface_string" />
 </resources>

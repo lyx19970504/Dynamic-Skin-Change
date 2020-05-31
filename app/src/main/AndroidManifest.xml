@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dynamicskindemo">
+    package="com.example.dynamic_skin_change">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
