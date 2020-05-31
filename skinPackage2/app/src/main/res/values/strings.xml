@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">skinPackage2</string>
+
+    <string name="custom_typeface_string">font/huakangshaonv.ttf</string>
+</resources>
