@@ -13,7 +13,8 @@ import java.io.File;
 
 public class MainActivity extends SkinActivity {
 
-    private String skinPath;
+    private String blueSkinPath;
+    private String pineSkinPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +26,20 @@ public class MainActivity extends SkinActivity {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
         }
 
-        skinPath = Environment.getExternalStorageDirectory() + File.separator + "myskin.skin";
+        blueSkinPath = Environment.getExternalStorageDirectory() + File.separator + "blue.skin";
+        pineSkinPath = Environment.getExternalStorageDirectory() + File.separator + "pink.skin";
     }
 
     //从资源文件中加载皮肤包
-    public void changeSkinFromResource(View view) {
-        if (!TextUtils.isEmpty(skinPath)) {
-            skinChange(skinPath, R.color.skin_item_color);
+    public void changeSkinToBlue(View view) {
+        if (!TextUtils.isEmpty(blueSkinPath)) {
+            skinChange(blueSkinPath, R.color.skin_item_color);
+        }
+    }
+
+    public void changeSkinToPink(View view){
+        if (!TextUtils.isEmpty(pineSkinPath)) {
+            skinChange(pineSkinPath, R.color.skin_item_color);
         }
     }
 

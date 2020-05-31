@@ -17,6 +17,6 @@
         <attr name="android:background"/>
     </declare-styleable>
     <declare-styleable name="SkinImageView">
-        <attr name="src"/>
+        <attr name="android:src"/>
     </declare-styleable>
 </resources>

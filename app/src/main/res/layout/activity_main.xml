@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/netease_bg"
+    android:background="@drawable/bg_img"
     android:orientation="vertical">
 
     <LinearLayout
@@ -21,14 +21,14 @@
                 android:id="@+id/iv_1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/music_icn_local" />
+                android:src="@drawable/icon3" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_1"
-                android:text="本地音乐 (32)"
+                android:text="测试文本1"
                 android:textColor="@color/skin_textColor"
                 android:textSize="16sp" />
         </RelativeLayout>
@@ -48,14 +48,14 @@
                 android:id="@+id/iv_2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/music_icn_recent" />
+                android:src="@drawable/icon4" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_2"
-                android:text="最近播放(12)"
+                android:text="测试文本2"
                 android:textColor="@color/skin_textColor"
                 android:textSize="16sp" />
         </RelativeLayout>
@@ -75,14 +75,14 @@
                 android:id="@+id/iv_3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/music_icn_dld" />
+                android:src="@drawable/icon2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_3"
-                android:text="下载管理(10)"
+                android:text="测试文本3"
                 android:textColor="@color/skin_textColor"
                 android:textSize="16sp" />
         </RelativeLayout>
@@ -102,14 +102,14 @@
                 android:id="@+id/iv_4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/music_icn_artist" />
+                android:src="@drawable/icon1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/iv_4"
-                android:text="我是歌手(6)"
+                android:text="测试文本4"
                 android:textColor="@color/skin_textColor"
                 android:textSize="16sp" />
         </RelativeLayout>
@@ -127,8 +127,16 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:background="@color/skin_item_color"
-            android:onClick="changeSkinFromResource"
-            android:text="换肤"
+            android:onClick="changeSkinToBlue"
+            android:text="换肤(蓝色主题)"
+            android:textColor="@color/skin_textColor" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/skin_item_color"
+            android:onClick="changeSkinToPink"
+            android:text="换肤(粉色主题)"
             android:textColor="@color/skin_textColor" />
 
         <Button
@@ -138,14 +146,6 @@
             android:background="@color/skin_item_color"
             android:onClick="changeSkinToDefault"
             android:text="默认"
-            android:textColor="@color/skin_textColor" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/skin_item_color"
-            android:text="跳转"
             android:textColor="@color/skin_textColor" />
 
     </LinearLayout>
@@ -160,7 +160,7 @@
             android:id="@+id/iv"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/ghsy" />
+            android:src="@drawable/image" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -176,20 +176,20 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/iv_play1"
-            android:src="@drawable/playbar_btn_playlist" />
+            android:src="@drawable/icon7" />
 
         <ImageView
             android:id="@+id/iv_play1"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@id/iv_play2"
-            android:src="@drawable/playbar_btn_play" />
+            android:src="@drawable/icon6" />
 
         <ImageView
             android:id="@+id/iv_play2"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/playbar_btn_next" />
+            android:src="@drawable/icon5" />
     </RelativeLayout>
 </RelativeLayout>

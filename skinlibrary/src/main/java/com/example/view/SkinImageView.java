@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.SparseIntArray;
 import android.widget.ImageView;
 
@@ -36,7 +37,7 @@ public class SkinImageView extends ImageView implements ViewMatch {
 
     @Override
     public void skinChange() {
-        int srcKey = resourceNames[R.styleable.SkinImageView_src];
+        int srcKey = resourceNames[R.styleable.SkinImageView_android_src];
         int srcId = mSparseIntArray.get(srcKey);
         if (srcId > 0) {
             if (SkinManager.getInstance().isDefaultSkin()) {
